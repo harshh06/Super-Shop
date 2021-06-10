@@ -21,7 +21,7 @@ import { listProductDetails } from "../actions/productActions";
 const ProductScreen = ({ history, match }) => {
   //const product = products.find((p) => p._id === match.params.id);
   //const [product, setProduct] = useState({});
-  const [qty, setQty] = useState(0); // qty is a component level state
+  const [qty, setQty] = useState(1); // qty is a component level state
   const dispatch = useDispatch();
 
   const productDetails = useSelector((state) => state.productDetails);
@@ -32,7 +32,7 @@ const ProductScreen = ({ history, match }) => {
   }, [dispatch, match]);
 
   const addToCartHandler = () => {
-    history.push(`/cart/${match.params._id}/qty=${qty}`);
+    history.push(`/cart/${match.params.id}?qty=${qty}`);
   };
 
   return (
