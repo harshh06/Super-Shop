@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+h1 {
+  font-size: 1.4 rem;
+  padding: 0.1 rem;
+}
+
 main {
   min-height: 80vh;
 }
