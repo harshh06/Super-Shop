@@ -9,6 +9,6 @@ import { protect } from "../middleware/authMiddleware.js";
 
 router.route("/").post(registerUser);
 router.post("/login", authUser);
-router.route("/profile").get(protect, getUserProfile);
+router.route("/profile").get(protect, getUserProfile); // pass protect to whichever route needs to be protected ..
 
 export default router;
